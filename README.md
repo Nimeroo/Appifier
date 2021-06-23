@@ -61,41 +61,41 @@ _**Game Station** allows the user to post their opinions on different games that
 
 #### Wireframes
 
-![Desk Home](https://imgur.com/CEGnQUw")
+![Desk Home](https://i.imgur.com/CEGnQUw.png")
 
 - Desktop Home
 
-![Desk Details](https://imgur.com/rOTdDCi")
+![Desk Details](https://i.imgur.com/rOTdDCi.png")
 
 - Desktop Details and Comments
 
-![Desk Logged In Details](https://imgur.com/cGwothN")
+![Desk Logged In Details](https://i.imgur.com/cGwothN.png")
 
 - Desktop Logged In Details and Comments
 
-![Desk Create](https://imgur.com/PeU9WYn")
+![Desk Create](https://i.imgur.com/PeU9WYn.png")
 
 - Desktop Create Post
 
-![Desk Register](https://imgur.com/v7bBCOr")
+![Desk Register](https://i.imgur.com/v7bBCOr.png")
 
 - Desktop Sign-Up
 
-![Desk Login](https://imgur.com/MOXNIQg")
+![Desk Login](https://i.imgur.com/MOXNIQg.png")
 
 - Desktop Login
 
-![Mobile Home](https://imgur.com/YPG3Gu6")
+![Mobile Home](https://i.imgur.com/YPG3Gu6.png")
 
 - Mobile Home
 
-![Mobile Details](https://imgur.com/IqfDVnx")
+![Mobile Details](https://i.imgur.com/IqfDVnx.png")
 
 - Mobile Details
 
 #### Component Tree
 
-[Component Tree Sample](https://imgur.com/kN7f75E")
+[Component Tree Sample](https://i.imgur.com/kN7f75E.png")
 
 #### Component Architecture
 
@@ -157,8 +157,6 @@ src
 ### Server (Back End)
 
 #### ERD Model
-
-> Use this section to display an image of a computer generated ERD model. You can use draw.io, Lucidchart or another ERD tool.
 
 [ERD Sample](https://ibb.co/MDYRKhv)
 <br>
