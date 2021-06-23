@@ -61,35 +61,35 @@ _**Game Station** allows the user to post their opinions on different games that
 
 #### Wireframes
 
-![](https://imgur.com/CEGnQUw)
+![Desk Home](https://imgur.com/CEGnQUw)
 
 - Desktop Home
 
-![](https://imgur.com/rOTdDCi)
+![Desk Details](https://imgur.com/rOTdDCi)
 
 - Desktop Details and Comments
 
-![](https://imgur.com/cGwothN)
+![Desk Logged In Details](https://imgur.com/cGwothN)
 
 - Desktop Logged In Details and Comments
 
-![](https://imgur.com/PeU9WYn)
+![Desk Create](https://imgur.com/PeU9WYn)
 
 - Desktop Create Post
 
-![](https://imgur.com/v7bBCOr)
+![Desk Register](https://imgur.com/v7bBCOr)
 
 - Desktop Sign-Up
 
-![](https://imgur.com/MOXNIQg)
+![Desk Login](https://imgur.com/MOXNIQg)
 
 - Desktop Login
 
-![](https://imgur.com/YPG3Gu6)
+![Mobile Home](https://imgur.com/YPG3Gu6)
 
 - Mobile Home
 
-![](https://imgur.com/IqfDVnx)
+![Mobile Details](https://imgur.com/IqfDVnx)
 
 - Mobile Details
 
