@@ -61,7 +61,7 @@ _**Game Station** allows the user to post their opinions on different games that
 
 #### Wireframes
 
-![Desk Home](https://imgur.com/CEGnQUw)
+https://imgur.com/CEGnQUw
 
 - Desktop Home
 
