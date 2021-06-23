@@ -158,7 +158,7 @@ src
 
 #### ERD Model
 
-[ERD Sample](https://ibb.co/MDYRKhv)
+[ERD Sample](https://ibb.co/vm94hnL)
 <br>
 
 ***
