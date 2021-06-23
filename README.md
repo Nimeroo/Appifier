@@ -61,41 +61,41 @@ _**Game Station** allows the user to post their opinions on different games that
 
 #### Wireframes
 
-https://imgur.com/CEGnQUw
+![Desk Home](https://imgur.com/CEGnQUw")
 
 - Desktop Home
 
-![Desk Details](https://imgur.com/rOTdDCi)
+![Desk Details](https://imgur.com/rOTdDCi")
 
 - Desktop Details and Comments
 
-![Desk Logged In Details](https://imgur.com/cGwothN)
+![Desk Logged In Details](https://imgur.com/cGwothN")
 
 - Desktop Logged In Details and Comments
 
-![Desk Create](https://imgur.com/PeU9WYn)
+![Desk Create](https://imgur.com/PeU9WYn")
 
 - Desktop Create Post
 
-![Desk Register](https://imgur.com/v7bBCOr)
+![Desk Register](https://imgur.com/v7bBCOr")
 
 - Desktop Sign-Up
 
-![Desk Login](https://imgur.com/MOXNIQg)
+![Desk Login](https://imgur.com/MOXNIQg")
 
 - Desktop Login
 
-![Mobile Home](https://imgur.com/YPG3Gu6)
+![Mobile Home](https://imgur.com/YPG3Gu6")
 
 - Mobile Home
 
-![Mobile Details](https://imgur.com/IqfDVnx)
+![Mobile Details](https://imgur.com/IqfDVnx")
 
 - Mobile Details
 
 #### Component Tree
 
-[Component Tree Sample](https://imgur.com/kN7f75E)
+[Component Tree Sample](https://imgur.com/kN7f75E")
 
 #### Component Architecture
 
