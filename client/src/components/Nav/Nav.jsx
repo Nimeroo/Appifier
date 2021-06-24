@@ -1,21 +1,22 @@
 import React from "react";
+import { Link } from "react";
 
 const authenticatedOptions = (
   <>
-    <NavLink className="login-out" to="/log-out">
+    <Link className="login-out" to="/log-out">
       Sign Out
-    </NavLink>
+    </Link>
   </>
 );
 
 const unauthenticatedOptions = (
   <>
-    <NavLink className="signup-link" to="/sign-up">
+    <Link className="signup-link" to="/sign-up">
       Sign Up
-    </NavLink>
-    <NavLink className="login-link" to="/log-in">
+    </Link>
+    <Link className="login-link" to="/log-in">
       Login
-    </NavLink>
+    </Link>
   </>
 );
 
