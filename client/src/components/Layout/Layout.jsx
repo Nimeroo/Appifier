@@ -5,7 +5,7 @@ import Footer from "../Footer/Footer";
 const Layout = (props) => {
   return (
     <div>
-      <Nav />
+      <Nav user={props.user} />
       {props.children}
       <Footer />
     </div>
