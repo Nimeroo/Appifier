@@ -1,5 +1,6 @@
 class UsersController < ApplicationController
   before_action :set_user, only: [:show, :update, :destroy]
+  before_action :authorize_request, except: :create
 
   # GET /users/1
   def show
@@ -19,6 +20,14 @@ class UsersController < ApplicationController
     else
       render json: @user.errors, status: :unprocessable_entity
     end
+  end
+
+  def add_game
+    @game = Game.find(params[:flavor_id])
+
+    @game.users << @user
+
+    render json: @user, include: :games
   end
 
   private
