@@ -29,7 +29,9 @@ function App() {
           <Route path="/login">
             <Login handleLogin={handleLogin} />
           </Route>
-          <Route></Route>
+          <Route exact path="/">
+            <Games />
+          </Route>
         </Switch>
       </Layout>
     </div>

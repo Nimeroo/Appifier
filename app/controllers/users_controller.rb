@@ -23,7 +23,7 @@ class UsersController < ApplicationController
   end
 
   def add_game
-    @game = Game.find(params[:flavor_id])
+    @game = Game.find(params[:game_id])
 
     @game.users << @user
 
