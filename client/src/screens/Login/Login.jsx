@@ -26,7 +26,7 @@ const Login = (props) => {
         }}
         className="login-form-container"
       >
-        <h4>Login</h4>
+        <h4 id="login-title">Login</h4>
         <label>
           Username:
           <input
@@ -48,7 +48,9 @@ const Login = (props) => {
         <button id="login-button" type="submit">
           Login
         </button>
-        <a href="/signup">New to Game Station? Click to here to sign up!</a>
+        <a className="signup-redirect" href="/signup">
+          New to Game Station? Click to here to sign up!
+        </a>
       </form>
     </div>
   );

@@ -1,0 +1,18 @@
+#game-div {
+  background-color: whitesmoke;
+  border: solid gold 1px;
+  box-shadow: 0px 7px 7px black;
+  display: flex;
+  flex-direction: row;
+  margin: 20px;
+  width: 80%;
+  height: 130px;
+}
+
+#game-list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: 2.5rem;
+  position: relative;
+}

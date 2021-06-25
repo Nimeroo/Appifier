@@ -8,12 +8,36 @@
 .login-div {
   display: flex;
   justify-content: center;
+  margin: 150px;
+}
+
+#login-title {
+  -webkit-text-stroke: 2px black;
+  text-shadow: 0px 7px 7px black;
+  font-size: 60px;
+  color: gold;
 }
 
 input {
   margin: 10px;
+  box-shadow: 0px 1px 1px lightgray;
 }
 
 button {
   margin: 50px;
+  background-color: gold;
+  box-shadow: 0px 3px 3px black;
+}
+
+button:hover {
+  transition: 0.5s;
+  background-color: goldenrod;
+  border-radius: 0px;
+  box-shadow: 0px 0px 0px black;
+}
+
+.signup-redirect {
+  text-decoration: none;
+  color: black;
+  text-shadow: 0px 7px 7px black;
 }
