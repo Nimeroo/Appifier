@@ -1,6 +1,7 @@
 import "./App.css";
 import Layout from "./components/Layout/Layout";
 import Login from "./screens/Login/Login";
+import Games from "./components/Games/Games";
 import { Switch, Route } from "react-router-dom";
 import { useState, useEffect } from "react";
 import { loginUser, verifyUser } from "./services/auth";
@@ -28,6 +29,7 @@ function App() {
           <Route path="/login">
             <Login handleLogin={handleLogin} />
           </Route>
+          <Route></Route>
         </Switch>
       </Layout>
     </div>
