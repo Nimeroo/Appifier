@@ -42,7 +42,6 @@ _**Game Station** allows the user to post their opinions on different games that
 - _Login and logout functionality_
 - _Render's the different games on homepage_
 - _Ability to create, edit and delete comments on games and render those comments on each game page_
-- 
 
 <br>
 
