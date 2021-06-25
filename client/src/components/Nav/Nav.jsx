@@ -39,7 +39,7 @@ const Nav = (props) => {
         e Station
       </div>
       {props.user ? authenticatedOptions : unauthenticatedOptions}
-      {props.user && <div>Welcome, {props.user.username}</div>}
+      {props.user && <img src={props.user.imgURL} />}
     </div>
   );
 };
