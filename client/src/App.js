@@ -2,7 +2,7 @@ import "./App.css";
 import Layout from "./components/Layout/Layout";
 import Login from "./screens/Login/Login";
 import { Switch, Route } from "react-router-dom";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { loginUser, verifyUser } from "./services/auth";
 
 function App() {
@@ -14,8 +14,8 @@ function App() {
   };
 
   return (
-    <div ClassName="App">
-      <Layout user={verifyUser}>
+    <div className="App">
+      <Layout user={currentUser}>
         <Switch>
           <Route path="/login">
             <Login handleLogin={handleLogin} />

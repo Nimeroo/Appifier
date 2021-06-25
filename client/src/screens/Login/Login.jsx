@@ -18,7 +18,7 @@ const Login = (props) => {
   };
 
   return (
-    <div>
+    <div className="login-div">
       <form
         onSubmit={(e) => {
           e.preventDefault();
@@ -45,8 +45,10 @@ const Login = (props) => {
             onChange={handleChange}
           />
         </label>
-        <h5>New to Game Station? Click to here to sign up!</h5>
-        <button type="submit">Login</button>
+        <button id="login-button" type="submit">
+          Login
+        </button>
+        <a href="/signup">New to Game Station? Click to here to sign up!</a>
       </form>
     </div>
   );

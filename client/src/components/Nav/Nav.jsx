@@ -1,4 +1,5 @@
 import React from "react";
+import "./Nav.css";
 import { NavLink } from "react-router-dom";
 
 const authenticatedOptions = (
@@ -10,22 +11,33 @@ const authenticatedOptions = (
 );
 
 const unauthenticatedOptions = (
-  <>
+  <div className="user-links">
     <NavLink className="signup-link" to="/signup">
       Sign Up
     </NavLink>
     <NavLink className="login-link" to="/login">
       Login
     </NavLink>
-  </>
+  </div>
 );
 
 const Nav = (props) => {
   return (
-    <div>
-      <img src="https://icon-library.com/images/transparent-house-icon/transparent-house-icon-13.jpg"></img>
-      Ga<img src="https://static.thenounproject.com/png/197931-200.png"></img>me
-      Station
+    <div className="nav-container">
+      <NavLink to="/">
+        <img
+          className="home-icon"
+          src="https://icon-library.com/images/transparent-house-icon/transparent-house-icon-13.jpg"
+        ></img>
+      </NavLink>
+      <div id="logo-div">
+        Ga
+        <img
+          className="controller-M"
+          src="https://static.thenounproject.com/png/197931-200.png"
+        ></img>
+        e Station
+      </div>
       {props.user ? authenticatedOptions : unauthenticatedOptions}
       {props.user && <div>Welcome, {props.user.username}</div>}
     </div>

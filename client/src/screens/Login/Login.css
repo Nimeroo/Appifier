@@ -1,8 +1,19 @@
 .login-form-container {
   display: flex;
+  text-align: center;
   flex-direction: column;
+  justify-content: center;
+}
+
+.login-div {
+  display: flex;
+  justify-content: center;
 }
 
 input {
-  margin: 5px;
+  margin: 10px;
+}
+
+button {
+  margin: 50px;
 }
