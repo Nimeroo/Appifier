@@ -1,22 +1,22 @@
 import React from "react";
-import { Link } from "react";
+import { NavLink } from "react-router-dom";
 
 const authenticatedOptions = (
   <>
-    <Link className="login-out" to="/log-out">
-      Sign Out
-    </Link>
+    <NavLink className="login-out" to="/">
+      Logout
+    </NavLink>
   </>
 );
 
 const unauthenticatedOptions = (
   <>
-    <Link className="signup-link" to="/sign-up">
+    <NavLink className="signup-link" to="/signup">
       Sign Up
-    </Link>
-    <Link className="login-link" to="/log-in">
+    </NavLink>
+    <NavLink className="login-link" to="/login">
       Login
-    </Link>
+    </NavLink>
   </>
 );
 
@@ -26,8 +26,8 @@ const Nav = (props) => {
       <img src="https://icon-library.com/images/transparent-house-icon/transparent-house-icon-13.jpg"></img>
       Ga<img src="https://static.thenounproject.com/png/197931-200.png"></img>me
       Station
-      {user ? authenticatedOptions : unauthenticatedOptions}
-      {user && <div>Welcome, {props.user.username}</div>}
+      {props.user ? authenticatedOptions : unauthenticatedOptions}
+      {props.user && <div>Welcome, {props.user.username}</div>}
     </div>
   );
 };
