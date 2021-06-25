@@ -8,7 +8,7 @@ const Games = (props) => {
       {props.games.map((game) => {
         return (
           <div id="game-div">
-            <Link to="/">
+            <Link to={`/${game.id}`}>
               <h2>{game.title}</h2>
               <h4>{game.genre}</h4>
             </Link>
