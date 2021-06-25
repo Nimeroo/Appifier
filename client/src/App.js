@@ -1,7 +1,7 @@
 import "./App.css";
 import Layout from "./components/Layout/Layout";
 import Login from "./screens/Login/Login";
-import Games from "./components/Games/Games";
+import GamesHome from "./screens/GamesHome/GamesHome";
 import { Switch, Route } from "react-router-dom";
 import { useState, useEffect } from "react";
 import { loginUser, verifyUser } from "./services/auth";
@@ -30,7 +30,7 @@ function App() {
             <Login handleLogin={handleLogin} />
           </Route>
           <Route exact path="/">
-            <Games />
+            <GamesHome />
           </Route>
         </Switch>
       </Layout>
