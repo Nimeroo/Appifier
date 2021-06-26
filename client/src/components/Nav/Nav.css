@@ -11,28 +11,35 @@
   height: 110px;
 }
 #logo-div {
+  position: absolute;
   font-size: 75px;
 }
 .user-links {
-  margin-top: 40px;
+  margin: 40px;
+  margin-left: 800px;
 }
 
-.login-link {
-  margin-left: 5px;
+.links {
   color: black;
+  padding: 20px;
   text-decoration: none;
 }
 
-.signup-link {
-  margin-right: 5px;
-  color: black;
-  text-decoration: none;
+.links:hover {
+  transition: 1s;
+  color: gold;
 }
 
 .home-icon {
   height: 50px;
   width: 50px;
   margin-top: 25px;
+}
+
+.home-icon:hover {
+  transition: 1s;
+  height: 60px;
+  width: 60px;
 }
 
 .controller-M {

@@ -7,12 +7,10 @@ const Games = (props) => {
     <div id="game-list">
       {props.games.map((game) => {
         return (
-          <div id="game-div">
-            <Link to={`/${game.id}`}>
-              <h2>{game.title}</h2>
-              <h4>{game.genre}</h4>
-            </Link>
-          </div>
+          <Link id="game-div" to={`/${game.id}`}>
+            <h2 className="div-labels">{game.title}</h2>
+            <h4 className="div-labels">{game.genre}</h4>
+          </Link>
         );
       })}
     </div>
