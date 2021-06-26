@@ -16,10 +16,16 @@ const GameDetails = () => {
   }, [id]);
 
   return (
-    <div>
-      <h1>{game.title}</h1>
-      <h3>{game.genre}</h3>
-      <h5>{game.platform}</h5>
+    <div id="game-details-container">
+      <h1 className="game-details" id="title">
+        {game.title}
+      </h1>
+      <h3 className="game-details" id="genre">
+        {game.genre}
+      </h3>
+      <h5 className="game-details" id="platform">
+        {game.platform}
+      </h5>
     </div>
   );
 };

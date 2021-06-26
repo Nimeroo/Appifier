@@ -12,10 +12,10 @@ const authenticatedOptions = (
 
 const unauthenticatedOptions = (
   <div className="user-links">
-    <NavLink className="signup-link" to="/signup">
+    <NavLink className="links" to="/signup">
       Sign Up
     </NavLink>
-    <NavLink className="login-link" to="/login">
+    <NavLink className="links" to="/login">
       Login
     </NavLink>
   </div>
