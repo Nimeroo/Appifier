@@ -8,7 +8,7 @@ const SignUp = (props) => {
     profile_image_url: "",
   });
 
-  const { username, email, password } = formData;
+  const { username, email, password, profile_image_url } = formData;
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -22,10 +22,10 @@ const SignUp = (props) => {
     <form
       onSubmit={(e) => {
         e.preventDefault();
-        handleRegister(formData);
+        props.handleSignUp(formData);
       }}
     >
-      <h3>Register</h3>
+      <h3>Sign-Up</h3>
       <label>
         Username:
         <input
@@ -50,7 +50,17 @@ const SignUp = (props) => {
           onChange={handleChange}
         />
       </label>
-      <br />
+
+      <label>
+        Profile picture link:
+        <input
+          type="text"
+          name="profile_image_url"
+          value={profile_image_url}
+          onChange={handleChange}
+        />
+      </label>
+
       <button>Submit</button>
     </form>
   );
