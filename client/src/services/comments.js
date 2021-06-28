@@ -6,7 +6,9 @@ export const getComments = async () => {
 };
 
 export const postComment = async (commentData) => {
-  const resp = await api.post("/comments", { comment: commentData });
+  const resp = await api.post("/games/:game_id/comments", {
+    comment: commentData,
+  });
   return resp.data;
 };
 

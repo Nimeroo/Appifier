@@ -3,7 +3,7 @@ import Layout from "./components/Layout/Layout";
 import Login from "./screens/Login/Login";
 import SignUp from "./screens/SignUp/SignUp";
 import GamesHome from "./screens/GamesHome/GamesHome";
-import GameDetails from "./components/GameDetails/GameDetails";
+import GamesComments from "./screens/GamesComments/GamesComments";
 import { Switch, Route, useHistory } from "react-router-dom";
 import { useState, useEffect } from "react";
 import {
@@ -57,7 +57,7 @@ function App() {
             <GamesHome />
           </Route>
           <Route path="/:id">
-            <GameDetails />
+            <GamesComments />
           </Route>
         </Switch>
       </Layout>
