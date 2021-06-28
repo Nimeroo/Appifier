@@ -2,26 +2,26 @@ import React from "react";
 import "./Nav.css";
 import { NavLink } from "react-router-dom";
 
-const authenticatedOptions = (
-  <>
-    <NavLink className="links" id="logout" to="/">
-      Logout
-    </NavLink>
-  </>
-);
-
-const unauthenticatedOptions = (
-  <div className="user-links">
-    <NavLink className="links" to="/signup">
-      Sign Up
-    </NavLink>
-    <NavLink className="links" to="/login">
-      Login
-    </NavLink>
-  </div>
-);
-
 const Nav = (props) => {
+  const authenticatedOptions = (
+    <>
+      <button onClick={props.logout} className="links" id="logout">
+        Logout
+      </button>
+    </>
+  );
+
+  const unauthenticatedOptions = (
+    <div className="user-links">
+      <NavLink className="links" to="/signup">
+        Sign Up
+      </NavLink>
+      <NavLink className="links" to="/login">
+        Login
+      </NavLink>
+    </div>
+  );
+
   return (
     <div className="nav-container">
       <NavLink to="/">

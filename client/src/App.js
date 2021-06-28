@@ -6,7 +6,12 @@ import GamesHome from "./screens/GamesHome/GamesHome";
 import GameDetails from "./components/GameDetails/GameDetails";
 import { Switch, Route, useHistory } from "react-router-dom";
 import { useState, useEffect } from "react";
-import { loginUser, registerUser, verifyUser } from "./services/auth";
+import {
+  loginUser,
+  registerUser,
+  removeToken,
+  verifyUser,
+} from "./services/auth";
 
 function App() {
   const [currentUser, setCurrentUser] = useState(null);
@@ -32,9 +37,15 @@ function App() {
     history.push("/");
   };
 
+  const handleLogout = () => {
+    setCurrentUser(null);
+    localStorage.removeItem("authToken");
+    removeToken();
+  };
+
   return (
     <div className="App">
-      <Layout user={currentUser}>
+      <Layout user={currentUser} logout={handleLogout}>
         <Switch>
           <Route path="/login">
             <Login handleLogin={handleLogin} />
