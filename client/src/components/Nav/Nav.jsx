@@ -4,7 +4,7 @@ import { NavLink } from "react-router-dom";
 
 const authenticatedOptions = (
   <>
-    <NavLink className="login-out" to="/">
+    <NavLink className="links" id="logout" to="/">
       Logout
     </NavLink>
   </>
@@ -38,8 +38,12 @@ const Nav = (props) => {
         ></img>
         e Station
       </div>
-      {props.user ? authenticatedOptions : unauthenticatedOptions}
-      {props.user && <img src={props.user.imgURL} />}
+      <div className="nav-user-info">
+        {props.user ? authenticatedOptions : unauthenticatedOptions}
+        {props.user && (
+          <img id="nav-profile-pic" src={props.user.profile_image_url} />
+        )}
+      </div>
     </div>
   );
 };
