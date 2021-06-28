@@ -23,13 +23,13 @@ input {
   box-shadow: 0px 1px 1px lightgray;
 }
 
-button {
+#login-button {
   margin: 50px;
   background-color: gold;
   box-shadow: 0px 3px 3px black;
 }
 
-button:hover {
+#login-button:hover {
   transition: 0.5s;
   background-color: goldenrod;
   border-radius: 0px;

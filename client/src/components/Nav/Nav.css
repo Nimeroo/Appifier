@@ -2,10 +2,8 @@
   background-color: whitesmoke;
   border-bottom: solid gold 2px;
   box-shadow: 0px 7px 7px black;
-  text-align: center;
   display: flex;
   flex-direction: row;
-  justify-content: center;
   justify-content: space-around;
   position: 1;
   height: 110px;
@@ -28,6 +26,25 @@
 .links:hover {
   transition: 1s;
   color: gold;
+}
+
+.nav-user-info {
+  display: flex;
+  justify-content: center;
+  margin-left: 400px;
+}
+
+#logout {
+  font-size: 16px;
+  background: none;
+  outline: none;
+  border: none;
+}
+
+#nav-profile-pic {
+  margin-top: 25px;
+  height: 50px;
+  width: 50px;
 }
 
 .home-icon {

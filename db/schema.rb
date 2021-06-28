@@ -10,10 +10,20 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_06_23_171723) do
+ActiveRecord::Schema.define(version: 2021_06_26_194148) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "comments", force: :cascade do |t|
+    t.string "content"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.bigint "user_id"
+    t.bigint "game_id"
+    t.index ["game_id"], name: "index_comments_on_game_id"
+    t.index ["user_id"], name: "index_comments_on_user_id"
+  end
 
   create_table "games", force: :cascade do |t|
     t.string "title"
@@ -21,11 +31,8 @@ ActiveRecord::Schema.define(version: 2021_06_23_171723) do
     t.string "platform"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-  end
-
-  create_table "games_users", id: false, force: :cascade do |t|
-    t.bigint "user_id", null: false
-    t.bigint "game_id", null: false
+    t.bigint "user_id"
+    t.index ["user_id"], name: "index_games_on_user_id"
   end
 
   create_table "users", force: :cascade do |t|
@@ -37,4 +44,7 @@ ActiveRecord::Schema.define(version: 2021_06_23_171723) do
     t.datetime "updated_at", precision: 6, null: false
   end
 
+  add_foreign_key "comments", "games"
+  add_foreign_key "comments", "users"
+  add_foreign_key "games", "users"
 end
