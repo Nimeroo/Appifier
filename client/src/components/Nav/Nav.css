@@ -7,6 +7,7 @@
   justify-content: space-around;
   position: 1;
   height: 110px;
+  width: 100%;
 }
 #logo-div {
   position: absolute;
@@ -63,4 +64,46 @@
   border: solid gold 2px;
   height: 50px;
   width: 50px;
+}
+
+@media only screen and (max-width: 900px) {
+  .nav-user-info {
+    display: flex;
+    flex-direction: column;
+    margin-left: 300px;
+  }
+
+  #logo-div {
+    margin-top: 35px;
+    font-size: 40px;
+  }
+
+  .controller-M {
+    height: 30px;
+    width: 30px;
+  }
+
+  .home-icon {
+    height: 30px;
+    width: 30px;
+    margin-top: 40px;
+    margin-left: 20px;
+  }
+
+  #nav-profile-pic {
+    margin-top: 5px;
+    margin-left: 20px;
+    margin-bottom: 5px;
+  }
+}
+
+@media only screen and (max-width: 700px) {
+  #logo-div {
+    margin-top: 35px;
+    font-size: 30px;
+  }
+
+  .nav-user-info {
+    margin-right: 50px;
+  }
 }

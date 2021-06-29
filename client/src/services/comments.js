@@ -17,7 +17,7 @@ export const putComment = async (id, commentData) => {
   return resp.data;
 };
 
-export const deleteFood = async (id) => {
+export const deleteComment = async (id) => {
   const resp = await api.delete(`/comments/${id}`);
   return resp;
 };

@@ -5,11 +5,19 @@
 }
 
 .comment-div {
+  border: solid gold 1px;
   display: inherit;
   align-content: center;
   background-color: whitesmoke;
   width: 75%;
   height: 150px;
+  margin: 30px;
+}
+
+#edit-form-container {
+  display: flex;
+  width: 95%;
+  flex-direction: row-reverse;
   margin: 30px;
 }
 
@@ -19,8 +27,40 @@
   resize: none;
   color: black;
   font: inherit;
-  width: 1150px;
+  width: 95%;
+  height: 70%;
   margin-left: 100px;
   margin-top: 10px;
   font-size: 14px;
+}
+
+.buttons-div {
+  display: flex;
+  justify-content: space-evenly;
+  flex-direction: column;
+}
+
+#edit-button {
+  background-color: gold;
+  box-shadow: 0px 3px 3px black;
+}
+
+#delete-button {
+  background-color: gold;
+  box-shadow: 0px 3px 3px black;
+}
+
+#submit-button {
+  background-color: gold;
+  margin-top: 30px;
+  height: 25px;
+  box-shadow: 0px 3px 3px black;
+}
+
+.main-buttons:hover {
+  transition: 0.5s;
+  background-color: goldenrod;
+  border-radius: 0px;
+  box-shadow: 0px 0px 0px black;
+  cursor: pointer;
 }

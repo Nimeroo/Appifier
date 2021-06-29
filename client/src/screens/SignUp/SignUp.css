@@ -1,0 +1,38 @@
+.signup-form-container {
+  display: flex;
+  text-align: center;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.signup-div {
+  display: flex;
+  justify-content: center;
+  margin: 150px;
+}
+
+#signup-title {
+  -webkit-text-stroke: 2px black;
+  text-shadow: 0px 7px 7px black;
+  font-size: 60px;
+  color: gold;
+}
+
+#signup-button {
+  margin: 50px;
+  background-color: gold;
+  box-shadow: 0px 3px 3px black;
+}
+
+#signup-button:hover {
+  transition: 0.5s;
+  background-color: goldenrod;
+  border-radius: 0px;
+  box-shadow: 0px 0px 0px black;
+}
+
+.login-redirect {
+  text-decoration: none;
+  color: black;
+  text-shadow: 0px 7px 7px black;
+}
