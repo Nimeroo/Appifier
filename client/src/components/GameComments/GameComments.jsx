@@ -1,16 +1,15 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "./GameComments.css";
+import { putComment } from "../../services/comments";
 import { useParams } from "react-router";
 import UserInfo from "../UserInfo/UserInfo";
-import { putComment } from "../../services/comments";
 
-const GameComments = ({ user, comments, game }) => {
+const GameComments = ({ user, comments, game, handleDelete }) => {
   const { id } = useParams();
-
   const [disableStatus, setDisableStatus] = useState(true);
   const [commentContent, setCommentContent] = useState({
-    content: "",
     id: id,
+    content: "",
     game_id: game.id,
     user_id: user.id,
   });
@@ -25,7 +24,7 @@ const GameComments = ({ user, comments, game }) => {
 
   const handleUpdate = async (id, formData) => {
     const editComment = await putComment(id, formData);
-    setCommentContent((prevState) => [prevState, editComment]);
+    setCommentContent((prevState) => [...prevState, editComment]);
   };
 
   return (
@@ -35,16 +34,26 @@ const GameComments = ({ user, comments, game }) => {
           <div className="comment-div">
             <UserInfo user={user} />
 
-            <div>
+            <div className="buttons-div">
               <button
+                id="edit-button"
+                className="main-buttons"
                 onClick={() => {
                   setDisableStatus(!disableStatus);
                 }}
               >
                 Edit
               </button>
+              <button
+                id="delete-button"
+                className="main-buttons"
+                onClick={() => handleDelete(comment.id)}
+              >
+                Delete
+              </button>
             </div>
             <form
+              id="edit-form-container"
               onSubmit={(e) => {
                 e.preventDefault();
                 handleUpdate(id, commentContent);
@@ -59,7 +68,15 @@ const GameComments = ({ user, comments, game }) => {
               >
                 {comment.content}
               </textarea>
-              {!disableStatus && <button type="submit">Submit</button>}
+              {!disableStatus && (
+                <button
+                  id="submit-button"
+                  className="main-buttons"
+                  type="submit"
+                >
+                  Submit
+                </button>
+              )}
             </form>
           </div>
         );

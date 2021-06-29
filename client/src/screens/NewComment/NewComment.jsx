@@ -1,13 +1,9 @@
 import React, { useState } from "react";
-import { useParams } from "react-router";
-import { createBrowserHistory } from "history";
+import { Link, useHistory } from "react-router-dom";
 import { postComment } from "../../services/comments";
 
 const NewComment = ({ user, game }) => {
-  const { id } = useParams();
-  const history = createBrowserHistory({ forceRefresh: true });
-
-  console.log(user);
+  const history = useHistory();
 
   const [commentContent, setCommentContent] = useState({
     content: "",
@@ -28,8 +24,7 @@ const NewComment = ({ user, game }) => {
   const handleCreate = async (formData) => {
     const newComment = await postComment(formData);
     setCommentContent((prevState) => [prevState, newComment]);
-
-    history.push(`/${id}`);
+    history.push(`/${game.id}`);
   };
 
   return (
@@ -51,6 +46,9 @@ const NewComment = ({ user, game }) => {
           />
         </label>
         <button type="submit">Submit</button>
+        <Link to={`/${game.id}`}>
+          <img src="https://image.flaticon.com/icons/png/512/60/60577.png" />
+        </Link>
       </form>
     </div>
   );

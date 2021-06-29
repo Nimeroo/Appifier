@@ -4,7 +4,6 @@ import Login from "./screens/Login/Login";
 import SignUp from "./screens/SignUp/SignUp";
 import GamesHome from "./screens/GamesHome/GamesHome";
 import GamesComments from "./screens/GamesComments/GamesComments";
-import NewComment from "./screens/NewComment/NewComment";
 import { Switch, Route, useHistory, useParams } from "react-router-dom";
 import { useState, useEffect } from "react";
 import {
@@ -17,7 +16,6 @@ import {
 function App() {
   const [currentUser, setCurrentUser] = useState(null);
   let history = useHistory();
-  const { id } = useParams();
 
   useEffect(() => {
     const handleVerify = async () => {
