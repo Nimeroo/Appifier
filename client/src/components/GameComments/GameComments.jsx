@@ -1,34 +1,66 @@
 import React, { useState } from "react";
 import "./GameComments.css";
+import { useParams } from "react-router";
 import UserInfo from "../UserInfo/UserInfo";
+import { putComment } from "../../services/comments";
 
-const GameComments = (props) => {
+const GameComments = ({ user, comments, game }) => {
+  const { id } = useParams();
+
   const [disableStatus, setDisableStatus] = useState(true);
-  const [edit, setEdit] = useState("Edit");
+  const [commentContent, setCommentContent] = useState({
+    content: "",
+    id: id,
+    game_id: game.id,
+    user_id: user.id,
+  });
+
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setCommentContent((prevState) => ({
+      ...prevState,
+      [name]: value,
+    }));
+  };
+
+  const handleUpdate = async (id, formData) => {
+    const editComment = await putComment(id, formData);
+    setCommentContent((prevState) => [prevState, editComment]);
+  };
 
   return (
     <div className="comments-list">
-      {props.comments.map((comment) => {
+      {comments.map((comment) => {
         return (
           <div className="comment-div">
-            <UserInfo user={props.user} />
+            <UserInfo user={user} />
+
             <div>
               <button
                 onClick={() => {
                   setDisableStatus(!disableStatus);
-                  if (disableStatus == true) {
-                    setEdit("Submit");
-                  } else {
-                    setEdit("Edit");
-                  }
                 }}
               >
-                {edit}
+                Edit
               </button>
             </div>
-            <textarea disabled={disableStatus} className="comment-content">
-              {comment.content}
-            </textarea>
+            <form
+              onSubmit={(e) => {
+                e.preventDefault();
+                handleUpdate(id, commentContent);
+              }}
+            >
+              <textarea
+                type="text"
+                name="content"
+                disabled={disableStatus}
+                onChange={handleChange}
+                className="comment-content"
+              >
+                {comment.content}
+              </textarea>
+              {!disableStatus && <button type="submit">Submit</button>}
+            </form>
           </div>
         );
       })}
