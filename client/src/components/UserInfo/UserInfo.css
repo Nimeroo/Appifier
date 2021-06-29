@@ -1,0 +1,14 @@
+.user-info {
+  display: flex;
+  flex-direction: column;
+  margin-left: 15px;
+}
+
+#comment-pfp {
+  height: 60px;
+  width: 60px;
+}
+
+#comment-user {
+  font-size: 13px;
+}

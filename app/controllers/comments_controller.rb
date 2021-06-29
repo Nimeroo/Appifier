@@ -8,11 +8,6 @@ class CommentsController < ApplicationController
     render json: @comments
   end
 
-  # GET /comments/1
-  def show
-    render json: @comment
-  end
-
   # POST /comments
   def create
     @comment = Comment.new(comment_params)
@@ -46,6 +41,6 @@ class CommentsController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def comment_params
-      params.require(:comment).permit(:content)
+      params.require(:comment).permit(:content, :game_id, :user_id)
     end
 end

@@ -1,0 +1,26 @@
+.comments-list {
+  display: flex;
+  justify-items: center;
+  flex-direction: column;
+}
+
+.comment-div {
+  display: inherit;
+  align-content: center;
+  background-color: whitesmoke;
+  width: 75%;
+  height: 150px;
+  margin: 30px;
+}
+
+.comment-content {
+  border: none;
+  background-color: inherit;
+  resize: none;
+  color: black;
+  font: inherit;
+  width: 1150px;
+  margin-left: 100px;
+  margin-top: 10px;
+  font-size: 14px;
+}
