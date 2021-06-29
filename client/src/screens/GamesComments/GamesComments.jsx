@@ -35,7 +35,7 @@ const GamesComments = (props) => {
           <Link exact to={`/${id}/new-comment`}>
             <button>New Comment</button>
           </Link>
-          <GameComments comments={comments} />
+          <GameComments user={props.user} comments={comments} />
         </Route>
         <Route exact path="/:id/new-comment">
           <NewComment user={props.user} game={game} />

@@ -1,0 +1,19 @@
+.comments-list {
+  display: flex;
+  justify-items: center;
+  flex-direction: column;
+}
+
+.comment-div {
+  display: inherit;
+  align-content: center;
+  background-color: whitesmoke;
+  width: 75%;
+  height: 150px;
+  margin: 30px;
+}
+
+.comment-content {
+  margin-left: 100px;
+  font-size: 14px;
+}
