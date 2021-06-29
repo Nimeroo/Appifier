@@ -59,7 +59,7 @@ function App() {
             <GamesHome />
           </Route>
           <Route path="/:id">
-            <GamesComments />
+            <GamesComments user={currentUser} />
           </Route>
         </Switch>
       </Layout>

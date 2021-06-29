@@ -1,15 +1,21 @@
 import React, { useState } from "react";
 import { useParams } from "react-router";
+import { useHistory } from "react-router-dom";
 import { postComment } from "../../services/comments";
 
-const NewComment = () => {
+const NewComment = ({ user, game }) => {
+  const { id } = useParams();
+  const history = useHistory();
+
+  console.log(user);
+
   const [commentContent, setCommentContent] = useState({
     content: "",
+    game_id: game.id,
+    user_id: user.id,
   });
 
   const { content } = commentContent;
-
-  const { id } = useParams();
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -21,7 +27,9 @@ const NewComment = () => {
 
   const handleCreate = async (formData) => {
     const newComment = await postComment(formData);
-    setCommentContent((prevState) => [...prevState, newComment]);
+    setCommentContent((prevState) => [prevState, newComment]);
+
+    history.push(`/${id}`);
   };
 
   return (
@@ -30,7 +38,7 @@ const NewComment = () => {
       <form
         onSubmit={(e) => {
           e.preventDefault();
-          handleCreate(content);
+          handleCreate(commentContent);
         }}
       >
         <label>
