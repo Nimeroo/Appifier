@@ -1,11 +1,11 @@
 import React, { useState } from "react";
 import { useParams } from "react-router";
-import { useHistory } from "react-router-dom";
+import { createBrowserHistory } from "history";
 import { postComment } from "../../services/comments";
 
 const NewComment = ({ user, game }) => {
   const { id } = useParams();
-  const history = useHistory();
+  const history = createBrowserHistory({ forceRefresh: true });
 
   console.log(user);
 
