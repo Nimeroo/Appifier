@@ -5,11 +5,7 @@ import NewComment from "../NewComment/NewComment";
 import { getGame } from "../../services/games";
 import { React, useState, useEffect } from "react";
 import { Link, Route, Switch, useParams } from "react-router-dom";
-import {
-  putComment,
-  getComments,
-  deleteComment,
-} from "../../services/comments";
+import { getComments, deleteComment } from "../../services/comments";
 
 const GamesComments = (props) => {
   const [comments, setComments] = useState([]);

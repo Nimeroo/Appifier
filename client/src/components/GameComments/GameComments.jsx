@@ -14,6 +14,8 @@ const GameComments = ({ user, comments, game, handleDelete }) => {
     user_id: user.id,
   });
 
+  useEffect(() => {}, []);
+
   const handleChange = (e) => {
     const { name, value } = e.target;
     setCommentContent((prevState) => ({
@@ -23,8 +25,19 @@ const GameComments = ({ user, comments, game, handleDelete }) => {
   };
 
   const handleUpdate = async (id, formData) => {
-    const editComment = await putComment(id, formData);
-    setCommentContent((prevState) => [...prevState, editComment]);
+    setCommentContent({
+      id: id,
+      content: "",
+      game_id: game.id,
+      user_id: user.id,
+    });
+  };
+
+  const prefillFormData = (id) => {
+    const commentData = comments.find((comment) => {
+      return comment.id === id;
+    });
+    setCommentContent(commentData);
   };
 
   return (
@@ -40,6 +53,7 @@ const GameComments = ({ user, comments, game, handleDelete }) => {
                 className="main-buttons"
                 onClick={() => {
                   setDisableStatus(!disableStatus);
+                  prefillFormData(comment.id);
                 }}
               >
                 Edit

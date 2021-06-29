@@ -6,3 +6,15 @@
   margin: 40px;
   font-size: 50px;
 }
+
+@media only screen and (max-width: 1200px) {
+  #motto {
+    margin-right: 90px;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  #motto {
+    margin-right: 50px;
+  }
+}
