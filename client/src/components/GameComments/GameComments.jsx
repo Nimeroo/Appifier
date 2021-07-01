@@ -1,11 +1,12 @@
 import React, { useState, useEffect } from "react";
 import "./GameComments.css";
-import { putComment } from "../../services/comments";
+import { useHistory } from "react-router";
 import { useParams } from "react-router";
 import UserInfo from "../UserInfo/UserInfo";
 
 const GameComments = ({ user, comments, game, handleDelete }) => {
   const { id } = useParams();
+  const history = useHistory();
   const [disableStatus, setDisableStatus] = useState(true);
   const [commentContent, setCommentContent] = useState({
     id: id,
@@ -61,7 +62,10 @@ const GameComments = ({ user, comments, game, handleDelete }) => {
               <button
                 id="delete-button"
                 className="main-buttons"
-                onClick={() => handleDelete(comment.id)}
+                onClick={() => {
+                  handleDelete(comment.id);
+                  history.push("/");
+                }}
               >
                 Delete
               </button>

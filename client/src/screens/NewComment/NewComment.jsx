@@ -25,7 +25,7 @@ const NewComment = ({ user, game }) => {
   const handleCreate = async (formData) => {
     const newComment = await postComment(formData);
     setCommentContent((prevState) => [prevState, newComment]);
-    history.push(`/${game.id}`);
+    history.push("/");
   };
 
   return (
